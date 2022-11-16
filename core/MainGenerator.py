@@ -1,0 +1,3 @@
+
+class MainGenerator:
+    pass
