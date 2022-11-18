@@ -11,19 +11,19 @@ class StringGenerator(ClassicGenerator):
         self.__type=__types[type]
     
     def generateAlphaNumeric(self):
-        return random.sample(self.all,self.length)
+        return random.choices(self.all,k=self.length)
     
     def generateAlpha(self):
-        return random.sample(Alphanumerics().alphalower()+Alphanumerics().alphaupper(),self.length)
+        return random.choices(Alphanumerics().alphalower()+Alphanumerics().alphaupper(),k=self.length)
     
     def generateAlphabetUpper(self):
-        return random.sample(Alphanumerics().alphaupper(),self.length)
+        return random.choices(Alphanumerics().alphaupper(),k=self.length)
 
     def generateAlphabetLower(self):
-        return random.sample(Alphanumerics().alphalower(),self.length)
+        return random.choices(Alphanumerics().alphalower(),k=self.length)
 
     def generateAlphabetSymbolic(self):
-        return random.sample(Alphanumerics().symbols()+self.all,self.length)
+        return random.choices(Alphanumerics().symbols()+self.all,k=self.length)
 
     def generate_list(self):
         if self.__type == 1:

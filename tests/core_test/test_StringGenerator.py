@@ -10,7 +10,7 @@ class StingGeneratorTestMethods(unittest.TestCase):
 
     def test_print_all_Generation_and_test_length(self):
         for x in self.__types:
-            i=random.randint(1,20)
+            i=random.randint(1,100)
             gen = StringGenerator(i,x)
             genstring= gen.generate()
             self.assertEqual(i,len(genstring))
@@ -19,7 +19,7 @@ class StingGeneratorTestMethods(unittest.TestCase):
 
     def test_for_string_type(self):
         for x in self.__types:
-            i=random.randint(1,20)
+            i=random.randint(1,200)
             gen = StringGenerator(i,x)
             genstring= gen.generate()
             self.assertEqual(type(genstring),type('str'))
