@@ -6,11 +6,13 @@ Input data from shell
 
 '''
 import sys
+from themain.Interactive import Interactive
 
 def shellcall():
     print("Shell")
 
 def interactive():
+    Interactive().start()
     print("Interactive")
 
 if __name__ == '__main__':

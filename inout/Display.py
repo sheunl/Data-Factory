@@ -1,4 +1,4 @@
 class Display:
     
-    def print_out(var):
+    def print_out(self,var):
         print(var)
