@@ -1,0 +1,5 @@
+Usage: datafactory.py [OPTION...] [OUTPUT]...
+Datafactory generates random string of data for testing and other purposes.
+
+Examples:
+    datafactory.py 

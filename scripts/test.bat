@@ -1,1 +1,1 @@
-python -m unittest
+python -m unittest  > "Test Report\windows_report.txt"
