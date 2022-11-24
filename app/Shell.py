@@ -3,6 +3,7 @@ from core.StringGenerator import StringGenerator
 from core.ArrayGenerator import ArrayGenerator
 from inout.Display import Display
 from inout.FileGenerator import FileGenerator
+from app.Error import Error
 
 class Shell:
 
@@ -37,10 +38,13 @@ class Shell:
             Display().print_out(so.generate())
     
     def run_array(self):
-        ao= ArrayGenerator(self.length,self.short_string_types[self.value_type],0,10)
+        if self.array_high - self.array_low<0:
+            Error().print_error("High value less than low value")
+            Help().noValue()
+        ao= ArrayGenerator(self.length,self.short_string_types[self.value_type],self.array_low,self.array_high)
         value=ao.generate()
         if self.printfile==True:
-            FileGenerator().print_out(value,self.filename)
+            FileGenerator().print_out(str(value),self.filename)
         else:
             Display().print_out(ao.generate())
         
@@ -54,15 +58,33 @@ class Shell:
             Help().noValue()
 
     def check_for_errors(self, string):
-        if '-v' not in string:
+        if '-v' not in string and '--valuetype' not in string:
             Help().noValue()
 
-        if '-t' not in string:
+        if '-t' not in string and '--datatype' not in string:
             Help().noValue()
 
         try:
-            self.data_type=string[string.index('-t')+1]
-            self.value_type=string[string.index('-v')+1]
+            if '-t' in string:
+                self.data_type=string[string.index('-t')+1]
+
+            if '--datatype' in string:
+                self.data_type=string[string.index('--datatype')+1]
+            
+            if '-v' in string:
+                self.value_type=string[string.index('-v')+1]
+
+            if '--valuetype' in string:
+                self.value_type=string[string.index('--valuetype')+1]
+
+            if '--file' in string:
+                try:
+                    self.filename=string[string.index('--file')+1]
+                except:
+                    pass
+
+                self.printfile=True
+
             if '-x' in string:
                 try:
                     self.filename=string[string.index('-x')+1]
@@ -71,10 +93,41 @@ class Shell:
 
                 self.printfile=True
 
+            if '--length' in string:
+                try:
+                    self.length=int(string[string.index('--length')+1])
+                except:
+                    pass
+
             if '-0' in string:
                 try:
                     self.length=int(string[string.index('-0')+1])
                 except:
                     pass
+            
+            if '-l' in string:
+                try:
+                    self.array_low=int(string[string.index('-l')+1])
+                except:
+                    pass
+
+            if '--low' in string:
+                try:
+                    self.array_low=int(string[string.index('--low')+1])
+                except:
+                    pass
+            
+            if '-h' in string:
+                try:
+                    self.array_high=int(string[string.index('-h')+1])
+                except:
+                    pass
+
+            if '--high' in string:
+                try:
+                    self.array_high=int(string[string.index('--high')+1])
+                except:
+                    pass
+            
         except:
             Help().noValue()

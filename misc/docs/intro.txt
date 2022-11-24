@@ -15,4 +15,4 @@ B.Arrays  a array
 7. Decimal d decimal
 8. Symbolic o symbolic
 
--t --datatype -v --valuetype -0 --length -l --low -h --high
+-t --datatype -v --valuetype -0 --length -l --low -h --high -x --file
