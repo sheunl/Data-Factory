@@ -2,4 +2,9 @@ Usage: datafactory.py [OPTION...] [OUTPUT]...
 Datafactory generates random string of data for testing and other purposes.
 
 Examples:
-    datafactory.py 
+    datafactory.py -t a -v n
+    datafactory.py -t s -v u -x
+
+DESCRIPTION
+
+OPTIONS
