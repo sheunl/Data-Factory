@@ -6,8 +6,6 @@ Examples:
     datafactory.py -t s -v u -x
 
 DESCRIPTION
-Datafactory generates random string of data for testing and other purposes.
-
 
 OPTIONS
 -t, --datatype

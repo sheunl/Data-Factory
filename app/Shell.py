@@ -25,6 +25,9 @@ class Shell:
         self.filename='output.txt'
 
     def parse(self, string):
+        if '-h' in string or '--help' in string:
+            Help().printHelp()
+
         self.check_for_errors(string)
         self.run()
         # print(self.filename)
@@ -41,7 +44,7 @@ class Shell:
         if self.array_high - self.array_low<0:
             Error().print_error("High value less than low value")
             Help().noValue()
-        ao= ArrayGenerator(self.length,self.short_string_types[self.value_type],self.array_low,self.array_high)
+        ao= ArrayGenerator(self.length,self.short_array_types[self.value_type],self.array_low,self.array_high)
         value=ao.generate()
         if self.printfile==True:
             FileGenerator().print_out(str(value),self.filename)
@@ -105,7 +108,7 @@ class Shell:
                 except:
                     pass
             
-            if '-l' in string:
+            if '-L' in string:
                 try:
                     self.array_low=int(string[string.index('-l')+1])
                 except:
@@ -117,9 +120,9 @@ class Shell:
                 except:
                     pass
             
-            if '-h' in string:
+            if '-H' in string:
                 try:
-                    self.array_high=int(string[string.index('-h')+1])
+                    self.array_high=int(string[string.index('-H')+1])
                 except:
                     pass
 
