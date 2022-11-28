@@ -14,8 +14,8 @@ class StingGeneratorTestMethods(unittest.TestCase):
             gen = StringGenerator(i,x)
             genstring= gen.generate()
             self.assertEqual(i,len(genstring))
-            # print(x,end=' -> ')
-            # print(genstring)
+            print(x,end=' -> ')
+            print(genstring)
 
     def test_for_string_type(self):
         for x in self.__types:

@@ -1,4 +1,8 @@
 import unittest
+from app.Help import Help
 
 class HelpTestMethods(unittest.TestCase):
-    pass
+    
+    def test_noValue(self):
+        print("test_noValue")
+        Help.noValue()

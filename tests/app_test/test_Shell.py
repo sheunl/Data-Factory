@@ -9,7 +9,7 @@ class ShellTestMethods(unittest.TestCase):
         stringlist = "-t a -v n".split()
         with self.assertRaises(TypeError):
             shell.check_for_errors(3)
-        # shell.parse(stringlist)
+        shell.parse(stringlist)
     
     def test_all_commands_string(self):
         shell = Shell()

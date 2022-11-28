@@ -1,4 +1,7 @@
 import unittest
+from inout.FileGenerator import FileGenerator
 
 class FileGeneratorTestMethods(unittest.TestCase):
-    pass
+    
+    def test_filegeneration(self):
+        FileGenerator().print_out("Test Message","test_print") 

@@ -1,4 +1,8 @@
 import unittest
+from inout.Display import Display
 
 class DisplatTestMethods(unittest.TestCase):
-    pass
+    
+    def test_Print(self):
+        print("test_Print")
+        Display().print_out("Test Message")
