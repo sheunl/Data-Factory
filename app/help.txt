@@ -1,9 +1,9 @@
-Usage: datafactory.py [OPTION...] [OUTPUT]...
+Usage: dfac.py [OPTION...] [OUTPUT]...
 Datafactory generates random string of data for testing and other purposes.
 
 Examples:
-    datafactory.py -t a -v n
-    datafactory.py -t s -v u -x
+    dfac.py -t a -v n
+    dfac.py -t s -v u -x
 
 DESCRIPTION
 
