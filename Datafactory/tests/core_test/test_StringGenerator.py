@@ -1,6 +1,6 @@
 import unittest
 
-from core.StringGenerator import StringGenerator
+from dfac.core.StringGenerator import StringGenerator
 import random
 
 class StingGeneratorTestMethods(unittest.TestCase):

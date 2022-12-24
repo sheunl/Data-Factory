@@ -2,9 +2,9 @@
 ArrayGenerator generates array of types
 '''
 
-from generators.ClassicGenerator import ClassicGenerator
-from utilities.Alphanumerics import Alphanumerics
-from core.StringGenerator import StringGenerator
+from dfac.generators.ClassicGenerator import ClassicGenerator
+from dfac.utilities.Alphanumerics import Alphanumerics
+from dfac.core.StringGenerator import StringGenerator
 import random
 
 class ArrayGenerator(ClassicGenerator):

@@ -1,6 +1,6 @@
 import unittest
 import random
-from generators.ClassicGenerator import ClassicGenerator
+from dfac.generators.ClassicGenerator import ClassicGenerator
 
 class ClassicGeneratorTestMethods(unittest.TestCase):
     def test_default_init(self):

@@ -6,10 +6,10 @@ Input data from shell
 
 '''
 import sys
-from app.Help import Help
-from app.Shell import Shell
+from dfac.app.Help import Help
+from dfac.app.Shell import Shell
 
-if __name__ == '__main__':
+def run():
     sysinput =sys.argv[1:]
 
     if len(sysinput) == 0:
@@ -18,3 +18,8 @@ if __name__ == '__main__':
     if len(sysinput) > 0:
         shellcall=Shell()
         shellcall.parse(sysinput)
+
+if __name__ == '__main__':
+    run()
+    
+

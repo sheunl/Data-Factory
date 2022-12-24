@@ -1,6 +1,6 @@
 import unittest
 
-from utilities.Alphanumerics import Alphanumerics
+from dfac.utilities.Alphanumerics import Alphanumerics
 
 class AlphanumericsTestMethoods(unittest.TestCase):
     def test_ASCII_decimals(self):

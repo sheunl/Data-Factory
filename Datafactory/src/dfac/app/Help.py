@@ -3,7 +3,7 @@ import sys
 class Help:
 
     help_string ='''
-    Usage: dfac.py [OPTION...] [OUTPUT]...
+    Usage: dfac.py [OPTION...] [OUTPUT FILE]
 Datafactory generates random string of data for testing and other purposes.
 
 Examples:
@@ -73,7 +73,7 @@ Print out generated value to file, if no name is provided output.txt is used.
 Print this help text.
     '''
     def noValue(self):
-        print("Usage: 'main.py --help' for more information")
+        print("Usage: 'dfac --help' for more information")
         sys.exit()
     
     def printHelp(self):

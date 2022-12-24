@@ -1,5 +1,5 @@
 import unittest
-from inout.Display import Display
+from dfac.inout.Display import Display
 
 class DisplatTestMethods(unittest.TestCase):
     

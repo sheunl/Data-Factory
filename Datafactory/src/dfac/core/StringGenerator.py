@@ -1,5 +1,5 @@
-from generators.ClassicGenerator import ClassicGenerator
-from utilities.Alphanumerics import Alphanumerics
+from dfac.generators.ClassicGenerator import ClassicGenerator
+from dfac.utilities.Alphanumerics import Alphanumerics
 import random
 
 class StringGenerator(ClassicGenerator):

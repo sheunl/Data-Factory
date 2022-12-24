@@ -1,5 +1,5 @@
 import unittest
-from inout.FileGenerator import FileGenerator
+from dfac.inout.FileGenerator import FileGenerator
 
 class FileGeneratorTestMethods(unittest.TestCase):
     

@@ -1,9 +1,9 @@
-from app.Help import Help
-from core.StringGenerator import StringGenerator
-from core.ArrayGenerator import ArrayGenerator
-from inout.Display import Display
-from inout.FileGenerator import FileGenerator
-from app.Error import Error
+from dfac.app.Help import Help
+from dfac.core.StringGenerator import StringGenerator
+from dfac.core.ArrayGenerator import ArrayGenerator
+from dfac.inout.Display import Display
+from dfac.inout.FileGenerator import FileGenerator
+from dfac.app.Error import Error
 
 class Shell:
 

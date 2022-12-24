@@ -1,6 +1,6 @@
 import unittest
 import random
-from core.ArrayGenerator import ArrayGenerator 
+from dfac.core.ArrayGenerator import ArrayGenerator 
 
 class ArrayGeneratorTestMethods(unittest.TestCase):
     def test_AllArrayGenerators(self):

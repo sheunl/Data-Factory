@@ -1,5 +1,5 @@
 import unittest
-from app.Shell import Shell
+from dfac.app.Shell import Shell
 from random import randint
 
 class ShellTestMethods(unittest.TestCase):
